@@ -30,7 +30,7 @@ class Board   #attributes externally visible
 
   #returns turn count based on how many positions in cell array are filled
   def turn_count(cells = @cell)
-    cells.count {|taken| taken == "X" || taken == "O"
+    cells.count {|taken| taken == "X" || taken == "O"}
   end
 
   #takes in index and returns true if value is X or O
