@@ -53,7 +53,6 @@ class Game
     player = current_player
     current_move = player.move(@board) #if current move is not valid, give another turn
     if !@board.valid_move?(current_move)
-      binding.pry
       turn
     else
       puts "Next: #{@board.turn_count + 1}"
