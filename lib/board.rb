@@ -29,23 +29,13 @@ class Board   #attributes externally visible
   end
 
   #returns turn count based on how many positions in cell array are filled
-  def turn_count(cells = @cells)
-  turn = 0
-    cells.each do |taken|
-      if taken == "X" || taken == "O"
-    turn += 1
-    end
-    end
-    turn
+  def turn_count
+    cells.count {|cell| cell == "X" || cell == "O" }
   end
 
   #takes in index and returns true if value is X or O
-  def taken?(cells = @cells, location)
-    if @cells[location.to_i - 1] == "X" || @cells[location.to_i - 1] == "O"
-      return true
-    else
-      return false
-    end
+  def taken?(location)
+    @cells[location.to_i - 1] == "X" || @cells[location.to_i - 1] == "O"
   end
 
   #takes in user input 1-9 and returns true if not taken. entering space number not index
@@ -55,6 +45,6 @@ class Board   #attributes externally visible
 
   #takes in index and player object(X,O) and call taken method on the player
   def update(location, player)
-    cells[location.to_i - 1] = player.token 
+    cells[location.to_i - 1] = player.token
   end
 end
