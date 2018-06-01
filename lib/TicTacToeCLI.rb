@@ -31,6 +31,7 @@ def call
   elsif response == '2'
     game2 = Game.new
     puts "Who should go first and be player X?"
+    puts "Player X choose a move (1-9)"
       game2.play
 
   else
