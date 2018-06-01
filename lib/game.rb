@@ -20,7 +20,7 @@ class Game
 
   #state remembered interactions
   def current_player(board= @board)
-    if @board.turn_count.even? @player_1 : @player_2
+    @board.turn_count.even? @player_1 : @player_2
   end
 
   def won?
