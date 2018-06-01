@@ -31,7 +31,7 @@ class Board   #attributes externally visible
   #returns turn count based on how many positions in cell array are filled
   def turn_count(cells = @cells)
   turn = 0
-    cells.each do |taken|
+    cells.count do |taken|
       if taken == "X" || taken == "O"
     turn += 1
     end
