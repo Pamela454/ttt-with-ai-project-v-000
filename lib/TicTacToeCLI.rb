@@ -17,6 +17,7 @@ def call
     computerY = Players::Computer.new("O")
     game0 = Game.new(computerX, computerY)
     puts "Who should go first and be player X?"
+    puts "Player X choose a move (1-9)"
     game0.play
 
   elsif response == '1'
