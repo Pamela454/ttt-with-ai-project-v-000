@@ -24,6 +24,7 @@ def call
     game1 = Game.new(Players::Human.new("X"), computer)
 
     puts "Who should go first and be player X?"
+    puts "Player X choose a move (1-9)"
 
     game1.play
 
